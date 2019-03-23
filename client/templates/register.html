@@ -1,0 +1,40 @@
+<html ng-app="chatapp">
+  <head>
+      <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script> -->
+        <script src="../controller/controlRegister.js"></script>
+        <script src="../angular.js"></script>
+        <link href="../css/main.css" rel="stylesheet">
+       </head>
+<body ng-controller="controlRegister">
+
+
+<section id= main>
+  <article>
+    <main>
+      <form name="myForm" method="POST">
+
+        <h1><b>Register</b></h1>
+        <h2><p>Please fill the details to register.</p></h2> 
+        <div class="container">
+          
+         
+          
+          <label for="firstname"><b>FirstName</b></label>
+          <input type="text" placeholder="Enter FirstName" name="firstname" ng-model="firstname" required>
+          <label for="lastname"><b>LastName</b></label>
+          <input type="text" placeholder="Enter LastName" name="Lastname" ng-model="lastname" required>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" ng-model="email" required>
+          <br>
+          <label for="password"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="password" ng-model="password" id="password" title="at least 8 or more characters" required>
+      
+          </div>
+            
+            <button type="submit" value="Sign up" ng-click="register()" ng-disabled="myForm.$invalid">Register</button>
+      </form>
+    </main>
+  </article>
+</section>
+</body>
+</html>
