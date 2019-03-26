@@ -12,10 +12,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 
-
-// app.get('/', (req,res) => {
-//     res.json ({"message" : "welcome"});
-// });
 app.use('/', route);
 mongoose.Promise=global.Promise;
 app.listen(3000,() => {

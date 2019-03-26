@@ -7,4 +7,5 @@ router.post('/register', ctr1User.register);
 router.post('/login',ctr1User.login);
 router.post('/forgotPassword',ctr1User.forgotPassword);
 router.post('/resetPassword',ctr1User.resetPassword);
+router.get('/getAllUser',ctr1User.getAllUser);
 module.exports = router;

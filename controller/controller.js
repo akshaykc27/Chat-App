@@ -8,7 +8,7 @@ module.exports.register = (req, res) => {
     req.checkBody('firstname', 'firstname is not valid').isLength({ min: 3 }).isAlpha();
     req.checkBody('lastname', 'lastname is not valid').isLength({ min: 1 }).isAlpha();
     req.checkBody('email', 'Email is not valid').isEmail();
-    req.checkBody('password', 'password is not valid').isLength({ min: 4 }).equals(req.body.password);
+    req.checkBody('password', 'password is not valid').isLength({ min: 8 }).equals(req.body.password);
     var errors = req.validationErrors();
     var response = {};
     if (errors) {
@@ -23,9 +23,7 @@ module.exports.register = (req, res) => {
     userService.register(req.body, (err, data) => {
         if (err) {
             //console.log(err);
-            return res.status(500).send({
-                message: err
-            })
+            return res.status(500).send({ message: err})
         }
         else {
             // console.log(data);
@@ -57,9 +55,7 @@ module.exports.login = (req, res) => {
             });
         }
         else {
-            var token = jwt.sign({ email: req.email, id: data[0]._id },
-                secret,
-                { expiresIn: 86400000 });
+            var token = jwt.sign({ email: req.email, id: data[0]._id },secret,{ expiresIn: 86400000 });
             return res.status(200).send({
                 message: data,
                 "token": token
@@ -73,6 +69,7 @@ module.exports.login = (req, res) => {
 
 module.exports.forgotPassword = (req, res) => {
     userService.forgotPassword(req.body, (err, data) => {
+        console.log(data._id);
         var responses = {};
 
         if (err) {
@@ -132,6 +129,21 @@ module.exports.resetPassword = (req, res) => {
     }
 };
 
-
+module.exports.getAllUser = (req,res) =>
+{
+    userService.getAllUser(req,(err,data) => {
+        var response={};
+        if(err)
+        {
+            return callback(err);
+        }
+        else
+        {
+            response.success=true;
+            response.result = data;
+            res.status(200).send(response);
+        }
+    });
+};
 
 

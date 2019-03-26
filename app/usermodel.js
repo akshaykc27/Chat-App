@@ -36,7 +36,6 @@ function hash(password) {
 }
 
 usermodel.prototype.register = (body, callback) => {
-    // console.log("data in model==>",body.body);
 
     user.find({ 'email': body.email }, (err, data) => {
         if (err) {
@@ -86,7 +85,7 @@ usermodel.prototype.login = (body,callback) => {
                 else
                 {
                     console.log("incorrect password!!");
-                    return callback("Incoorrect password").status(500);
+                    return callback("Incorrect password").status(500);
                 }
             });
         }else {
@@ -146,6 +145,19 @@ usermodel.prototype.resetPassword = (body, callback) => {
         }
     });
 
+}
+
+usermodel.prototype.getAllUser = (req,callback) => {
+    user.find({},(err,data) =>
+    {
+        if(err)
+        {
+            callback(err);
+        }
+        else{
+            callback(null,data);
+        }
+    });
 }
 
 module.exports = new usermodel();
