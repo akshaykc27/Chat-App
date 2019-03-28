@@ -34,7 +34,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     });
 
     $urlRouterProvider.otherwise('login');
-
+});
 
     app.service('SocketService', ['socketFactory', function SocketService(socketFactory) {
         return socketFactory({
@@ -42,4 +42,4 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         });
     }]);
 
-});
+

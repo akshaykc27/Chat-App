@@ -152,12 +152,12 @@ usermodel.prototype.getAllUser = (req,callback) => {
     {
         if(err)
         {
-            callback(err);
+            console.log('error in chat model',err);
         }
         else{
             callback(null,data);
         }
-    });
+    })
 }
 
 module.exports = new usermodel();

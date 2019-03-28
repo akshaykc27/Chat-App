@@ -29,7 +29,7 @@ exports.forgotPassword = (req, callback) => {
     })
 }
 
-exports.reserPassword = (req, callback) => {
+exports.resetPassword = (req, callback) => {
     userModel.resetPassword(req, (err, data) => {
         if (err) {
             return callback(err);

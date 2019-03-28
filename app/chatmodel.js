@@ -3,30 +3,30 @@ var mongoSchema = mongoose.Schema;
 var chatSchema = new mongoSchema({
 
     senderUserId: {
-        type: string
+        type: String
 
     },
 
     senderName: {
-        type: string
+        type: String
 
     },
 
     receiverUserId: {
-        type: string
+        type: String
     },
 
     receiverName: {
-        type: string
+        type: String
     },
 
 
     message: {
-        type: string
+        type: String
     }
 },
     {
-        timestamps = true
+        timestamps: true
     });
 
 
@@ -66,16 +66,19 @@ try {
 catch (err) {
     console.log("ERROR  : Result was not found");
 }
+
+
 try {
-    chatModel.prototype.getUserMessage = ((req, callback) => {
-        chat.find({}), (err, data) => {
+    chatModel.prototype.getUserMessage = (req, callback) => {
+        chat.find({}, (err, data) => {
             if (err) {
+                console.log("ERROR in chat model")
                 callback(err)
             } else {
                 callback(null, data);
             }
-        }
-    })
+        })
+    }
 }
 catch (err) {
     console.log("EROOR: data not found !");
