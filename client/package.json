@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "chatapp",
   "version": "1.0.0",
   "description": "",
   "main": "angular.js",
@@ -36,3 +36,5 @@
     "ui-router": "^1.0.0-alpha.3"
   }
 }
+
+

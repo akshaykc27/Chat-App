@@ -8,7 +8,7 @@ app.service('serviceForgotPassword', function ($http, $location) {
             data: data,
         }).then(
             function successCallback(response) {
-                console.log("forgotPassword successfull ");
+                console.log("forgotPassword successful ");
                 var userid = response.data.message[0]._id;
                 var name = response.data.message[0].firstname;
                 var token = response.data.token;
@@ -16,11 +16,11 @@ app.service('serviceForgotPassword', function ($http, $location) {
                 localStorage.setItem("name", name);
                 localStorage.setItem("token",token);
                 $location.path('/dashboard');
-                $scope.loginMessage = "login successfull";
+                $scope.loginMessage = "login successful";
             },
             function errorCallback(response) {
 
-                console.log("register Unsuccessfull ");
+                console.log("registration Unsuccessful ");
                 console.log(response);
                 $scope.loginMessage = 'EmailId Incorrect ';
 
