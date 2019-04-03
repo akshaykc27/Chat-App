@@ -1,0 +1,112 @@
+body {font-family: Arial, Helvetica, sans-serif;
+   background-image: url("chat.jpg"); 
+ height: 500px; /* You must set a specified height */
+ background-position: center; /* Center the image */
+ background-repeat: no-repeat; /* Do not repeat the image */
+ background-size: cover;
+  }
+/* *  {box-sizing: border-box}  */
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+ width: 100%;
+ padding: 15px;
+ margin: 2px 0 22px 0;
+ display: inline-block;
+ border: none;
+ background:black;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+ background-color: rgb(255, 255, 255);
+ outline: none;
+}
+/* Set a style for all buttons */
+button {
+ background-color: rgb(172, 156, 12);
+ color:black;
+ font-size: 150%;
+ padding: 14px 20px;
+ margin: 8px 0;
+ border: none;
+ cursor: pointer;
+ width: 50%;
+ opacity: 0.9;
+}
+
+button:hover {
+ opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+ padding: 14px 20px;
+ background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+ float: left;
+ width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+ padding: 16px;
+ font-size: 20px;
+ text-align:left;
+ color : rgb(206, 186, 7);
+
+}
+
+/* Clear floats */
+.clearfix::after {
+ content: "";
+ clear: both;
+ display: table;
+
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+ .cancelbtn, .signupbtn {
+    width: 50%;
+ }
+}
+
+
+
+#main{
+width: 500px;
+margin: 20px auto;
+background: black;
+padding: 20px;
+/* border-radius: 1px; */
+opacity: 0.96;
+text-align: center;
+
+}
+#main h1{
+font-size: 50px;
+text-align: center;
+letter-spacing: 3.1px;
+font-weight: bolder;
+color : rgb(206, 186, 7);
+}
+#main h2{
+   letter-spacing: 1.1px;
+   font-weight: bolder;
+   color:rgb(206, 186, 7);
+}
+#main label{
+ text-align:justify;
+}
+
+.butt {
+ padding: 16px;
+ font-size: 20px;
+ text-align:center;
+ color : rgb(206, 186, 7);
+ 
+
+}

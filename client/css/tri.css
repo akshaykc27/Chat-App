@@ -1,0 +1,127 @@
+*{
+	box-sizing: border-box;
+	/* width: 100%; */
+}
+  
+.singleChat {
+	font-family: 'Times New Roman';
+}
+span{
+	font-size: 60%;
+	float:left;
+	margin-right:90px
+}
+.chat .chatMsg{
+	width: 100%;
+	padding: 10px;
+	margin:0px,0px,0px;
+	border-radius: 3%;
+	font-size: 20px;
+}
+.friend .chatMsg{   
+	background-color: blue;
+	color:#fff;
+	text-align: left;
+}
+.self .chatMsg{
+	color: rgb(73, 7, 134);
+	text-align: right;
+	background: linear-gradient(to bottom, rgba(237, 247, 180, 0.8) 0%, rgba(186, 223, 240, 0.6) 100%);
+	border-radius: 5%;
+}
+  
+  
+  
+  /* Style the header */
+
+
+.sendclick{
+	width: 12%;
+	margin-left: 90%;
+	padding: 0%;
+	margin-top: -60px
+}
+  
+  
+  /* Users list. Create two columns/boxes that floats next to each other.*/
+nav {
+	float: left;
+	border-radius: 3%;
+	width: 29%;
+	height: 600px; /* only for demonstration, should be removed */
+	background: linear-gradient(to bottom, rgba(38, 146, 235, 0.8) 0%, rgba(186, 223, 240, 0.6) 100%);
+	padding: 40px;
+	text-align: left;
+	cursor: pointer;
+	overflow-y:scroll;
+	overflow-x: scroll;
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	color: #1a237e;
+	font-style: italic;
+	text-align: center
+	
+}
+  
+  /* Style the list inside the menu */
+nav ul {
+	text-align: center;
+}
+  
+.gropChat{
+	float:right;
+	width: 70%;
+	height: 100%;  
+	margin: 0px 0px 0px;
+}
+  
+article {
+	float:right;
+	padding: 100px;
+	width: 71%;
+	height: 600px; /* only for demonstration, should be removed */
+	background: linear-gradient(to bottom, rgba(53, 221, 243, 0.8) 0%, rgba(186, 223, 240, 0.6) 100%);
+	border-radius: 2%
+}
+  
+.username{
+	margin:0px 10px 0px 0px;
+	color:rgb(238, 52, 167);
+	font-family: 'Times New Roman';
+	font-weight: bold;
+	font-style: italic
+}
+article section{
+	float:right;   
+	width: 100%;
+	height: 90%;
+	color: rgb(112, 180, 219);
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.text{ 
+	width: 87%;
+	margin: 30px 70px 0px 0px;
+	box-sizing: border-box;
+	border: 0.5px solid #fff;
+  border-radius: 10px;
+	box-shadow: 0px 0px 0px #000;
+	box-sizing: border-box;
+
+  margin: 5% auto;
+  text-align: center;
+  font-family: 'Times New Roman';
+  background: linear-gradient(to bottom, rgba(95, 191, 247, 0.8) 0%, rgba(0,0,0,0.6) 100%);
+  transition: opacity 0.1s, transform 0.3s cubic-bezier(0.17, -0.65, 0.665, 1.25);
+	transform: scale(1);
+	/* border-block-end-color: black; */
+	border-color: black
+}
+.con-list{
+	text-align: center;
+	font-family: 'Times New Roman';
+}
+
+.dashboard{
+	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-2.jpg');
+}
